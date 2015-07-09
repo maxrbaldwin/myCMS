@@ -1,0 +1,131 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,200italic,300italic,400italic,600italic);
+.side-navigation {
+  background: #009688;
+  padding: 15px;
+  color: #fff;
+  width: 100%;
+  box-sizing: border-box;
+}
+.tab {
+  margin: 0px 15px;
+  display: inline;
+}
+.post-form {
+  width: 100%;
+  box-sizing: border-box;
+}
+.post-form .my-form .input {
+  padding: 10px 0px;
+  box-sizing: border-box;
+}
+.post-form .my-form .input input {
+  display: block;
+  width: 100%;
+  padding: 10px 20px;
+  margin-top: 10px;
+}
+.post-form .my-form .input select {
+  display: block;
+  width: 100%;
+  padding: 10px 20px;
+  margin-top: 20px;
+}
+.post-form .my-form .input textarea {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+}
+.post-form .post-board {
+  position: relative;
+  padding: 10px;
+  height: 400px;
+}
+.post-form .post-board .tab {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: none;
+}
+.post-form .post-board .tab.active {
+  display: block;
+}
+.post-form .post-board .textarea {
+  width: 100%;
+}
+#canvas,
+#canvas-output-container {
+  height: 300px;
+  overflow-y: scroll;
+}
+.table {
+  width: 100%;
+  margin: 20px 0px;
+}
+.table .row {
+  width: 100%;
+  padding: 10px 0px;
+  border-bottom: 2px solid #cccccc;
+}
+.table .row div {
+  display: inline-block;
+  width: 19%;
+  text-align: center;
+}
+.table .row .title {
+  width: 40%;
+}
+.table .header div {
+  text-align: left;
+}
+.width {
+  width: 100%;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.clear {
+  clear: both;
+}
+* {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+body {
+  margin: 0px;
+}
+h1,
+h2,
+h4,
+h4 {
+  font-weight: 500;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a :hover {
+  text-decoration: none;
+}
+.wrapper {
+  width: 80%;
+  margin: 40px auto;
+  box-sizing: border-box;
+  color: #000000;
+}
+.button {
+  border-radius: 3px;
+  padding: 10px 20px;
+  text-decoration: none;
+  background: #009688;
+  color: #ffffff;
+}
+.button i {
+  margin-right: 10px;
+}
+.filters {
+  margin: 20px 0px;
+  box-sizing: border-box;
+}

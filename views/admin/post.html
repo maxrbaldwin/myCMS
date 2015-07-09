@@ -1,0 +1,62 @@
+{% extends "admin/layout.html" %}
+
+{% block body %}
+<div id="my-form" class="post-form">
+    <form class="my-form" action="/my/posts/{{ id }}" method="POST">
+        <div class="input text">
+            <label>Title</label>
+            <input type="text" value="{{ doc.post.title }}" placeholder="Title" name="title" />
+        </div>
+        <div class="input dropdown">
+            <label>Written By</label>
+            <select name="writtenBy">
+                {% for user in doc.users %}
+                    {% if doc.post.writtenBy[0]._id %}
+                        <option value="{{ user._id }}" selected>{{ user.name }}</option>
+                    {% else %}
+                        <option value="{{ user._id }}">{{ user.name }}</option>
+                    {% endif %}
+                {% endfor %}
+            </select>
+        </div>
+        <div class="input dropdown">
+            <label>Category</label>
+            <select name="category">
+                {% for category in doc.categories %}
+                    {% if doc.post.category[0]._id %}
+                        <option value="{{ category._id }}" selected>{{ category.name }}</option>
+                    {% else %}
+                        <option value="{{ category._id }}">{{ category.name }}</option>
+                    {% endif %}
+                {% endfor %}
+            </select>
+        </div>
+        <div class="post-board">
+            <div class="post-board-nav">
+                <a href="#" class="button toggle-view"><i class="fa fa-exchange"></i>Switch View</a>
+            </div>
+            <div class="tab active">
+                <div id="canvas-container" class="input textarea">
+                    <label>Markdown</label>
+                    <textarea name="content" id="canvas">
+                        {{ doc.post.content }}
+                    </textarea>
+                </div>
+            </div>
+            <div class="tab">
+                <div id="canvas-output-container" class="input view textarea">
+                    <label>Preview</label>
+                    <div id="canvas-output"></div>
+                </div>
+            </div>
+        </div>
+        <div class="input text">
+            <label>Tags</label>
+            <input type="text" placeholder="Tag1, Tag2, Tag3" name="tags" value="{{ doc.post.tags }}"/>
+        </div>
+        <div class="input submit">
+            <input type="submit" name="submit"/>
+        </div>
+    </form>
+</div>
+{% endblock %}

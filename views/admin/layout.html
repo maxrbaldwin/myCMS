@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin</title>
+    <link rel="stylesheet" type="text/css" href="/admin/css/master.css">
+    <link rel="stylesheet" type="text/css" href="/libs/css/font-awesome/css/font-awesome.css">
+</head>
+<body>
+    {% include "admin/includes/sidebar.html" %}
+    <div class="wrapper">
+        {% block body %}{% endblock %}
+    </div>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.2/marked.min.js"></script>
+<script type="text/javascript" src="/admin/js/dashboard.js"></script>
+{% if id %}
+<script type="text/javascript">
+    post_id = {{ id }}
+</script>
+{% endif %}
+</body>
+</html>

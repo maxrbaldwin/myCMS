@@ -1,0 +1,15 @@
+{% extends 'admin/layout.html' %}
+
+{% block body %}
+    <div id="my-form" class="post-form">
+        <form class="my-form" action="/my/categories/{{ id }}" method="POST">
+            <div class="input text">
+                <label>Category Name</label>
+                <input type="text" name="name" value="{{ doc.name }}" placeholder="Category"/>
+            </div>
+            <div class="input submit">
+                <input type="submit" name="submit"/>
+            </div>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,49 @@
+.post-form {
+    width: 100%;
+    box-sizing: border-box;
+    .my-form {
+        .input {
+            padding: 10px 0px;
+            box-sizing: border-box;
+            input {
+                display: block;
+                width: 100%;
+                padding: 10px 20px;
+                margin-top: 10px;
+            }
+            select {
+                display: block;
+                width: 100%;
+                padding: 10px 20px;
+                margin-top: 20px;
+            }
+            textarea {
+                display: block;
+                width: 100%;
+                margin-top: 20px;
+            }
+        }
+    }
+    .post-board {
+        position: relative;
+        padding: 10px;
+        height: 400px;
+        .tab {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            display: none;
+            &.active {
+                display: block;
+            }
+        }
+        .textarea {
+            width: 100%;
+        }
+    }
+}
+#canvas, #canvas-output-container {
+    height: 300px;
+    overflow-y: scroll;
+}

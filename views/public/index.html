@@ -1,0 +1,12 @@
+{% extends 'public/layout.html' %}
+
+{% block body %}
+    <p>
+        All of the posts
+    </p>
+    {% for post in posts %}
+        <div class="post">
+            <h1><a href="{{ post.category[0].name }}/{{ post._id }}">{{ post.title }}</a></h1>
+        </div>
+    {% endfor %}
+{% endblock %}

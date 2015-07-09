@@ -1,0 +1,54 @@
+@font: 'Source Sans Pro', sans-serif;
+@material: #009688;
+@lightest_material: #E0F2F1;
+@light_material: #80CBC4;
+@dark_material: #00796B;
+@border: 2px solid #ccc;
+@white: #fff;
+@black: #000;
+@spacing_margin: 20px 0px;
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,200italic,300italic,400italic,600italic);
+* {
+    font-family: @font;
+}
+
+body {
+    margin: 0px;
+}
+
+h1,
+h2,
+h4,
+h4 {
+    font-weight: 500;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    :hover {
+        text-decoration: none;
+    }
+}
+.wrapper {
+    width: 80%;
+    margin: 40px auto;
+    box-sizing: border-box;
+    color: @black;
+}
+.button {
+    border-radius: 3px;
+    padding: 10px 20px;
+    text-decoration: none;
+    background: @material;
+    color: @white;
+    i {
+        margin-right: 10px;
+    }
+}
+
+// Filter nav bar
+.filters {
+    margin: @spacing_margin;
+    box-sizing: border-box;
+}
